@@ -4,7 +4,13 @@ import java.util.Arrays;
 
 import static java.util.Arrays.*;
 
+
 public abstract class Heap {
+
+    public enum Heapify {
+        MAX,
+        MIN
+    }
 
     protected int size;
     protected int[] items;
@@ -99,6 +105,8 @@ public abstract class Heap {
         }
     }
 
+
+    public abstract Heap heapify(int[] data);
 
     /** Swap values down the Heap. **/
     public abstract void heapifyDown();

@@ -1,5 +1,7 @@
 package com.sunil.collections.heap;
 
+import java.lang.reflect.Array;
+
 public class MaxHeap extends Heap {
 
     public void heapifyUp() {
@@ -31,6 +33,16 @@ public class MaxHeap extends Heap {
     }
 
 
+    public Heap heapify(int[] data) {
+        int size = data.length - 1;
+        Heap maxHeap = new MaxHeap();
+        for (int index = 0; index <= size; index++) {
+            maxHeap.insert(data[index]);
+        }
+        return maxHeap;
+    }
+
+
     public static void main(String[] args) {
         Heap maxHeap = new MaxHeap();
         maxHeap.insert(5);
@@ -44,5 +56,10 @@ public class MaxHeap extends Heap {
 
         System.out.println("polling element: " + maxHeap.poll());
         maxHeap.print();
+
+        System.out.println("Heapify max array");
+        int[] data = new int[]{1,2,3,4,5,6,7,8,9};
+        Heap maxHeapify = maxHeap.heapify(data);
+        maxHeapify.print();
     }
 }

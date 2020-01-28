@@ -28,6 +28,14 @@ public class MinHeap extends Heap {
         }
     }
 
+    public Heap heapify(int[] data) {
+        Heap minHeap = new MinHeap();
+        for (int index = 0; index <= size; index++) {
+            minHeap.insert(data[index]);
+        }
+        return minHeap;
+    }
+
     public static void main(String[] args) {
         Heap minHeap = new MinHeap();
         minHeap.insert(5);
