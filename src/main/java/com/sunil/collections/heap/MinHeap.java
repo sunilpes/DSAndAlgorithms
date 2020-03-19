@@ -30,7 +30,7 @@ public class MinHeap extends Heap {
 
     public Heap heapify(int[] data) {
         Heap minHeap = new MinHeap();
-        for (int index = 0; index <= size; index++) {
+        for (int index = 0; index < data.length; index++) {
             minHeap.insert(data[index]);
         }
         return minHeap;
@@ -38,16 +38,19 @@ public class MinHeap extends Heap {
 
     public static void main(String[] args) {
         Heap minHeap = new MinHeap();
-        minHeap.insert(5);
-        minHeap.insert(10);
-        minHeap.insert(6);
-        minHeap.insert(15);
-        minHeap.insert(24);
-        minHeap.insert(13);
+        int index = 0;
 
-        minHeap.print();
+        int[] data = new int[31];
+        for (int i =31; i >= 1; i--) {
+            data[index] = i;
+            index++;
+        }
 
-        System.out.println("polling element: " + minHeap.poll());
-        minHeap.print();
+        Heap heap = minHeap.heapify(data);
+
+        heap.print();
+
+//        System.out.println("polling element: " + minHeap.poll());
+  //      minHeap.print();
     }
 }
