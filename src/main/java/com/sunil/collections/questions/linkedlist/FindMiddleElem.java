@@ -7,15 +7,12 @@ package com.sunil.collections.questions.linkedlist;
 public class FindMiddleElem {
 
     public static Node getMiddleNode(Node node) {
-        Node pointer1 = node, pointer2 = node;
-        while(pointer1 != null) {
-            pointer1 = pointer1.right;
-            if (pointer1 != null) {
-                pointer1 = pointer1.right;
-                if(pointer1 != null) pointer2 = pointer2.right;
-            }
+        Node fast = node, slow = node;
+        while(fast != null && fast.right !=null) {
+            fast = fast.right.right;
+            if(fast != null) slow = slow.right;
         }
-        return pointer2;
+        return slow;
     }
 
     public static void main(String[] args) {
@@ -25,7 +22,7 @@ public class FindMiddleElem {
         .add(4)
         .add(5)
         .add(6)
-        .add(7).add(8);
+        .add(7).add(8).add(9).add(10);
 
         //root.traverse();
 
