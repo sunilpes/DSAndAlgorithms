@@ -1,5 +1,10 @@
 package com.sunil.collections.questions.linkedlist;
 
+/**
+ *
+ * Detect whether linked list is cyclic or not
+ *
+ */
 public class DetectCycle {
 
     public static boolean isCyclic(Node node) {

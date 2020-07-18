@@ -26,4 +26,26 @@ public class Node {
         }
     }
 
+    public Node next() {
+        return this.right;
+    }
+
+    public Node prev() {
+        return this.left;
+    }
+
+    public void checkStructure() {
+        if (this.isRoot) {
+            assert(this.prev() == null);
+            assert(this.next() != null);
+        } else {
+            assert(this.prev() != null);
+            assert(this.next() != this.prev());
+        }
+
+        if(this.next() != null) {
+            this.next().checkStructure();
+        }
+    }
+
 }

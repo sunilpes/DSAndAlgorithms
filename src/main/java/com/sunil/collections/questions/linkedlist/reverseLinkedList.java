@@ -1,5 +1,8 @@
 package com.sunil.collections.questions.linkedlist;
 
+/**
+ * Reverse a given linkedList
+ */
 public class reverseLinkedList {
 
     public static Node reverseList(Node node) {
