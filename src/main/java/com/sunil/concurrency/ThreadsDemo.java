@@ -45,7 +45,7 @@ class Runner2 implements Runnable {
 
 public class ThreadsDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Runner r1 = new Runner("Thread1");
         r1.start();
 
@@ -71,6 +71,17 @@ public class ThreadsDemo {
             }
         });
         r4.start();
+
+        try {
+            r1.join(); // waits until the r2 thread dies!
+            r2.join();
+            r3.join();
+            r4.join();
+        } catch (InterruptedException ex) {
+            ex.printStackTrace();
+        }
+
+        System.out.println("waiting for all threads to finish!");
 
 
     }
