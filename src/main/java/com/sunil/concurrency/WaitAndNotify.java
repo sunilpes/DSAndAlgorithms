@@ -50,6 +50,7 @@ public class WaitAndNotify {
                 try {
                     for(String value: data) {
                         dataObject.send(value);
+                        Thread.sleep(500); // mimic server side processing
                     }
                 } catch (InterruptedException e) {
                     e.printStackTrace();
