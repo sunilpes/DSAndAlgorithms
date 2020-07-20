@@ -4,10 +4,13 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * https://www.baeldung.com/java-concurrent-locks
+ */
 class Messenger {
 
     private String packet;
-    private Lock lock = new ReentrantLock();
+    private Lock lock = new ReentrantLock(true);
     private Condition condition = lock.newCondition();
     // True, if receiver should wait
     // False, if sender should wait
