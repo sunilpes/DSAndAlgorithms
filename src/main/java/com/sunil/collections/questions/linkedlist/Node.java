@@ -21,9 +21,13 @@ public class Node {
     public void traverse() {
         Node that = this;
         while(that != null) {
-            System.out.println(that.data);
+            System.out.print(that.data);
             that = that.right;
         }
+    }
+
+    public int head() {
+        return this.data;
     }
 
     public Node next() {
@@ -46,6 +50,31 @@ public class Node {
         if(this.next() != null) {
             this.next().checkStructure();
         }
+    }
+
+    private int size(Node that) {
+        if (that == null) {
+            return 0;
+        }
+        return 1 + size(that.next());
+    }
+
+    public int size() {
+        return size(this);
+    }
+
+    public Node reverseList() {
+        Node curr = this;
+        Node prev = null;
+        Node next = null;
+
+        while(curr != null) {
+            next = curr.right;
+            curr.right = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
     }
 
 }

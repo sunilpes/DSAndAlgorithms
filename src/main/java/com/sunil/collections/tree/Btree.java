@@ -1,7 +1,5 @@
 package com.sunil.collections.tree;
 
-import sun.jvm.hotspot.ui.SysPropsPanel;
-
 import java.util.Arrays;
 
 public class Btree {

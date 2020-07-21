@@ -37,7 +37,6 @@ class Messenger {
             condition.signal();
             lock.unlock();
         }
-
     }
 
     public String receive() {
