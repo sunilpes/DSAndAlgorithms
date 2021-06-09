@@ -3,6 +3,11 @@ package com.sunil.collections.questions.stack;
 import java.util.LinkedList;
 import java.util.Queue;
 
+
+/**
+ * https://www.geeksforgeeks.org/implement-stack-using-queue/
+ */
+
 public class StackUsing2Queue {
 
     static Queue<Integer> q1 = new LinkedList<>();
@@ -25,9 +30,8 @@ public class StackUsing2Queue {
 
         }
 
-        public int pop() {
-            Integer d = q1.poll();
-            return d == null ? 0 : d;
+        public Integer pop() {
+            return q1.poll();
         }
     }
 

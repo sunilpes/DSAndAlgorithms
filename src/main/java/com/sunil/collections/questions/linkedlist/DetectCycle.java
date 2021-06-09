@@ -22,11 +22,11 @@ public class DetectCycle {
     }
 
 
-    public static void main(String[] args) {
-        Node root = new Node(1, true);
-        root.add(2).add(3).add(4).add(5).right = root;
-
-        System.out.println("LinkedList is Cyclic? => "+isCyclic(root));
-
-    }
+//    public static void main(String[] args) {
+//        Node root = new Node(1, true);
+//        root.add(2).add(3).add(4).add(5).right = root;
+//
+//        System.out.println("LinkedList is Cyclic? => "+isCyclic(root));
+//
+//    }
 }

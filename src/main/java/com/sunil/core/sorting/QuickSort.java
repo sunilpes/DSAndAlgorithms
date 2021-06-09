@@ -37,7 +37,7 @@ public class QuickSort {
 
 
     public static void main(String[] args) {
-        int[] numbers = new int[]{8,6,4,2,1};
+        int[] numbers = new int[]{8,6,4,2,5};
         sort(numbers, 0, numbers.length-1);
         System.out.println(String.format("sorted: %s", Arrays.toString(numbers)));
     }

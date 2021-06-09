@@ -21,7 +21,7 @@ public class reverseLinkedList {
 
     public static void main(String[] args) {
         Node root = new Node(1, true);
-        root.add(2).add(3).add(4).add(5);
+        root.add(2);
 
         Node reversedList = reverseList(root);
         reversedList.traverse();

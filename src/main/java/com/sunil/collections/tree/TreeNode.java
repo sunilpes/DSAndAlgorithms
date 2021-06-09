@@ -3,9 +3,9 @@ package com.sunil.collections.tree;
 import java.util.*;
 
 public class TreeNode<T> {
-    private T data;
-    private TreeNode<T> left;
-    private TreeNode<T> right;
+    public T data;
+    public TreeNode<T> left;
+    public TreeNode<T> right;
 
     public void setLeft(TreeNode<T> left) {
         this.left = left;
